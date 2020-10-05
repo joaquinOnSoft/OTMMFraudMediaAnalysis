@@ -15,7 +15,12 @@ These are the criteria evaluated:
       - Use reverse geocoding to get coordinates from incident address (provided as custom metadata associated with a Crash Picture)
       - Check the distance between coordinates (should be less than 1 km)
    - **Picture edited?** Information in Exif.Image.XMLPacket* field could indicate that the picture has been edited/manipulated
+     Exif.Image.XMLPacket	Byte	XMP Metadata (Adobe technote 9-14-02)
    - **Duplicated or similar picture**: Find the same picture in OTMM or one similar, in more than a 98%, means that in a reused/old picture
+
+Each time that a picture match one of the criteria the risk score is increased in 1 unit 
+
+If a picture has a risk score of 4 or higher a task is assigned to an Inspector to review the incident. It’s a potential fraud.
 
 > IMPORTANT: These add-on has been developed and tested on OTMM 20.3
 
@@ -27,7 +32,7 @@ If some bad words are found, It are stored in this custom fields:
  * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.EDITED**
  * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DUPLICATED**
 
-> NOTE: These custom field must be created from TEAMS admin panel.
+> NOTE: These custom field must be created from TEAMS administration panel.
 
 # Required .jar files
 
