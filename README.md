@@ -37,8 +37,8 @@ If some bad words are found, It are stored in this custom fields:
 # Event handler registration
 ## Register event listener
 1.	Copy this paragraph:
-``` 
 
+``` 
 <!-- Custom event listener (Fraud Media Analysis) -->
 <listener>
 	<listener-class>com.opentext.otmm.sc.evenlistener.AnalysisDataFromAzureIsDeletedEventListenerRegistration</listener-class>
@@ -48,16 +48,13 @@ If some bad words are found, It are stored in this custom fields:
 2.	Open **web.xml** file located at **C:\Apps\MediaManagement\ear\artesia\otmmux\WEB-INF**
 3.	Paste the paragraph under the **web-app** label
 
-## Deploy event listener classes
-1.	Copy the folder structure under the **&lt;PROJECT_HOME&gt;\bin**
-2.	Paste the **com** folder under **C:\Apps\MediaManagement\ear\artesia\otmmux\WEB-INF\classes**
-
 ## log4j.xml
 
 Log4j is a simple and flexible logging framework. The most common configuration options issuing  log4j.xml
 
 Follow these steps:
 1.	Copy these text:
+
 ``` 
 <!-- Custom added by Joaquín -->
 			
@@ -86,7 +83,14 @@ Follow these steps:
 	<appender-ref ref="file" />
 </logger>
 ``` 
+
 2.	Paste the paragraph before the **&lt;/log4j:configuration&gt;** label into **C:\Apps\MediaManagement_TomEE\conf\log4j.xml**
+
+
+## Deploy event listener classes
+1.	Copy the folder structure under the **&lt;PROJECT_HOME&gt;\bin**
+2.	Paste the **com** folder under **C:\Apps\MediaManagement\ear\artesia\otmmux\WEB-INF\classes**
+
 
 # Media Management Administration
 
@@ -98,12 +102,16 @@ In order to store the bad words said in the video you must create some metadata.
 2. Browse to **Metadata > Custom table editor** at the top menu
 3. Click on **Tabular Metadata tables** at the left menu
 4. Click on **New Tabular Metadata table** button
-5. Create a new table called: **PROFANITY_VIDEO_TAB**
+5. Create a new table called: **FRAUD_MEDIA_ANALYSIS_TAB**
 6. Add two new fields:
-   * BAD_WORD (CHARACTER)
-   * START_TIME (CHARACTER)
+   * **NO_METADATA** (CHARACTER) (Nullable)
+   * **PREVIOUS_EXIF_DATETIME** (CHARACTER) (Nullable)
+   * **DISTINCT_COORDINATES** (CHARACTER) (Nullable)
+   * **EDITED** (CHARACTER) (Nullable)
+   * **DUPLICATED** (CHARACTER) (Nullable)
 7. Click on **Save** button
 
+![New tabular metadata table](images/0000-new-tabular-metadata-table-FRAUD_MEDIA_ANALYSIS_TAB.png)
 
 # Required .jar files
 
