@@ -88,9 +88,15 @@ Follow these steps:
 
 
 ## Deploy event listener classes
-1.	Copy the folder structure under the **&lt;PROJECT_HOME&gt;\bin**
-2.	Paste the **com** folder under **C:\Apps\MediaManagement\ear\artesia\otmmux\WEB-INF\classes**
+1.	Open **Services** Desktop App
+2.	Select **Star OpenText MediaManagement Service**
+3.	Right click on **Star OpenText MediaManagement Service**
+4.	Select **Stop** in order to stop the service
+5.	Copy the folder structure under the **&lt;PROJECT_HOME&gt;\bin**
+6.	Paste the **com** folder under **C:\Apps\MediaManagement\ear\artesia\otmmux\WEB-INF\classes**
+7.	Restart  **Star OpenText MediaManagement Service** from **Services** Desktop App
 
+![Star OpenText MediaManagement Service](images/0050-start-OpenText-Media-Management-Service.png)
 
 # Media Management Administration
 
