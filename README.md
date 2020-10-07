@@ -86,7 +86,7 @@ Follow these steps:
 	<appender-ref ref="file" />
 </logger>
 ``` 
-2.	Paste the paragraph before the **&lt;/log4j:configuration&gt;** label into **C:\Apps\TomEE-OTMM\conf\log4j.xml**
+2.	Paste the paragraph before the **&lt;/log4j:configuration&gt;** label into **C:\Apps\MediaManagement_TomEE\conf\log4j.xml**
 
 # Media Management Administration
 
