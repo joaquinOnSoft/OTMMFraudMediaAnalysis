@@ -135,6 +135,26 @@ In order to store the Fraud Media Analysis (FMA) information you must create som
 ![New Lookup Domain Table FMA_CRITERIA_VALUE](images/0002-new-lookup-domain-table-FMA_CRITERIA_VALUE.png)
 
 
+## Create a Lookup Domains: FMA.DOMAIN.CRITERIA_VALUE	
+
+1. Browse to **Metadata > Metadata editor** at the top menu
+2. Click on **Lookup Domain** at the left menu
+3. Click on **New Lookup Domain** button
+4. Create a new Lookup Domain called: **FMA.DOMAIN.CRITERIA_VALUE**
+   * **Id**:	FMA.DOMAIN.CRITERIA_VALUE
+   * **Cacheable**:	Checked
+   * **Database Table**: FMA_CRITERIA_VALUE
+   * **Id (Join) Column**: ID	
+   * **Value (Display) Column**: VALUE
+   * **Order By Column**: ID
+   * **Query**: SELECT ID,VALUE FROM FMA_CRITERIA_VALUE ORDER BY ID	
+
+5. Click on **Save** button  
+    
+![New metadata table](images/0004-new-lookup-omain-FMA.DOMAIN.CRITERIA_VALUE.png)
+
+
+
 # Required .jar files
 
 > This section is only included to know the original location of the .jar files used in the project.
