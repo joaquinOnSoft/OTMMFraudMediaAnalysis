@@ -157,7 +157,7 @@ In order to store the Fraud Media Analysis (FMA) information you must create som
 ![New metadata table](images/0004-new-lookup-omain-FMA.DOMAIN.CRITERIA_VALUE.png)
 
 
-## Create custom Fields: CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DISTINCT.COORDINATES, CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.NO.METADATA, CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DUPLICATED, CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.EDITED and CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.PREVIOUS.EXIF.DATETIME
+## Create custom Fields
 
 1. Browse to **Metadata > Metadata editor** at the top menu
 2. Click on **Fields** at the left menu
