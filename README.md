@@ -100,14 +100,14 @@ Follow these steps:
 
 # Media Management Administration
 
-In order to store the Fraud Media Analysis information you must create some metadata.
+In order to store the Fraud Media Analysis (FMA) information you must create some metadata.
 
 ## Create a Tabular Metadata table: FRAUD_MEDIA_ANALYSIS_TAB
 
 1. Access to TEAMS (<OTMM_SERVER>/teams)
 2. Browse to **Metadata > Custom table editor** at the top menu
-3. Click on **Tabular Metadata tables** at the left menu
-4. Click on **New Tabular Metadata table** button
+3. Click on **Metadata tables** at the left menu
+4. Click on **New Metadata table** button
 5. Create a new table called: **FRAUD_MEDIA_ANALYSIS_TAB**
 6. Add two new fields:
    * **NO_METADATA** (CHARACTER) (Nullable)
@@ -117,7 +117,7 @@ In order to store the Fraud Media Analysis information you must create some meta
    * **DUPLICATED** (CHARACTER) (Nullable)
 7. Click on **Save** button
 
-![New tabular metadata table](images/0000-new-tabular-metadata-table-FRAUD_MEDIA_ANALYSIS_TAB.png)
+![New metadata table](images/0000-new-tabular-metadata-table-FRAUD_MEDIA_ANALYSIS_TAB.png)
 
 # Required .jar files
 
