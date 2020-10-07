@@ -98,9 +98,11 @@ Follow these steps:
 
 ![Star OpenText MediaManagement Service](images/0050-start-OpenText-Media-Management-Service.png)
 
+
 # Media Management Administration
 
 In order to store the Fraud Media Analysis (FMA) information you must create some metadata.
+
 
 ## Create a Metadata table: FRAUD_MEDIA_ANALYSIS_TAB
 
@@ -118,6 +120,7 @@ In order to store the Fraud Media Analysis (FMA) information you must create som
 7. Click on **Save** button
 
 ![New metadata table](images/0000-new-tabular-metadata-table-FRAUD_MEDIA_ANALYSIS_TAB.png)
+
 
 ## Create a Lookup Domain Table: FMA_CRITERIA_VALUE	
 
@@ -153,6 +156,28 @@ In order to store the Fraud Media Analysis (FMA) information you must create som
     
 ![New metadata table](images/0004-new-lookup-omain-FMA.DOMAIN.CRITERIA_VALUE.png)
 
+
+## Create custom Fields: CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DISTINCT.COORDINATES, CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.NO.METADATA, CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DUPLICATED, CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.EDITED and CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.PREVIOUS.EXIF.DATETIME
+
+1. Browse to **Metadata > Metadata editor** at the top menu
+2. Click on **Fields** at the left menu
+3. Click on **New Field** button
+4. Create a new tabular field called: **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DISTINCT.COORDINATES**
+   * **Id**:	CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DISTINCT.COORDINATES
+   * **Name**:	Status
+   * **Database Table**: FRAUD_MEDIA_ANALYSIS_TAB
+   * **Data Type**: CHAR	
+   * **Edit Type**: COMBO
+   * **Lookup Domain**: FMA.DOMAIN.CRITERIA_VALUE
+   * **Facetable**: Checked	
+5. Click on **Save** button
+6. Repeat previous steps for the other fields:
+   * CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.NO.METADATA, 
+   * CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DUPLICATED, 
+   * CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.EDITED
+   * CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.PREVIOUS.EXIF.DATETIME
+      
+![New tabular Field](images/0010-new-field-CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DISTINCT.COORDINATES.png)
 
 
 # Required .jar files
