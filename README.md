@@ -34,6 +34,77 @@ If some bad words are found, It are stored in this custom fields:
 
 > NOTE: These custom field must be created from TEAMS administration panel.
 
+# Event handler registration
+## Register event listener
+1.	Copy this paragraph:
+``` 
+
+<!-- Custom event listener (Fraud Media Analysis) -->
+<listener>
+	<listener-class>com.opentext.otmm.sc.evenlistener.AnalysisDataFromAzureIsDeletedEventListenerRegistration</listener-class>
+</listener>
+```
+ 
+2.	Open **web.xml** file located at **C:\Apps\MediaManagement\ear\artesia\otmmux\WEB-INF**
+3.	Paste the paragraph under the **web-app** label
+
+## Deploy event listener classes
+1.	Copy the folder structure under the **&lt;PROJECT_HOME&gt;\bin**
+2.	Paste the **com** folder under **C:\Apps\MediaManagement\ear\artesia\otmmux\WEB-INF\classes**
+
+## log4j.xml
+
+Log4j is a simple and flexible logging framework. The most common configuration options issuing  log4j.xml
+
+Follow these steps:
+1.	Copy these text:
+``` 
+<!-- Custom added by Joaquín -->
+			
+		
+<logger name="com.opentext.otmm.sc.evenlistener">
+	<level name="DEBUG"/>
+	<appender-ref ref="console" />
+	<appender-ref ref="file" />
+</logger>
+			
+<logger name="com.opentext.otmm.sc.evenlistener.handler">
+	<level name="DEBUG"/>
+	<appender-ref ref="console" />
+	<appender-ref ref="file" />
+</logger>
+			
+<logger name="com.opentext.otmm.sc.evenlistener.helper">
+	<level name="DEBUG"/>
+	<appender-ref ref="console" />
+	<appender-ref ref="file" />
+</logger>
+			
+<logger name="com.opentext.otmm.sc.evenlistener.util">
+	<level name="DEBUG"/>
+	<appender-ref ref="console" />
+	<appender-ref ref="file" />
+</logger>
+``` 
+2.	Paste the paragraph before the **&lt;/log4j:configuration&gt;** label into **C:\Apps\TomEE-OTMM\conf\log4j.xml**
+
+# Media Management Administration
+
+In order to store the bad words said in the video you must create some metadata.
+
+## Create a Tabular Metadata table: PROFANITY_VIDEO_TAB
+
+1. Access to TEAMS (<OTMM_SERVER>/teams)
+2. Browse to **Metadata > Custom table editor** at the top menu
+3. Click on **Tabular Metadata tables** at the left menu
+4. Click on **New Tabular Metadata table** button
+5. Create a new table called: **PROFANITY_VIDEO_TAB**
+6. Add two new fields:
+   * BAD_WORD (CHARACTER)
+   * START_TIME (CHARACTER)
+7. Click on **Save** button
+
+
 # Required .jar files
 
 > This section is only included to know the original location of the .jar files used in the project.

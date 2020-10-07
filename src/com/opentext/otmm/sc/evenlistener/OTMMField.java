@@ -18,6 +18,8 @@
  */
 package com.opentext.otmm.sc.evenlistener;
 
+import com.artesia.entity.TeamsIdentifier;
+
 /**
  * <strong>Database Table:</strong>	OTMM_FRAUD_MEDIA_ANALYSIS
  * <strong>Fields:</strong>
@@ -45,8 +47,16 @@ public interface OTMMField {
 	public static final String CUSTOM_FRAUD_MEDIA_ANALYSIS_DISTINCT_GPS_COORDINATES = "CUSTOM.FRAUD.MEDIA.ANALYSIS.DISTINCT_GPS_COORDINATES";
 	public static final String CUSTOM_FRAUD_MEDIA_ANALYSIS_EDITED = "CUSTOM.FRAUD.MEDIA.ANALYSIS.EDITED";
 	public static final String CUSTOM_FRAUD_MEDIA_ANALYSIS_DUPLICATED = "CUSTOM.FRAUD.MEDIA.ANALYSIS.DUPLICATED";
-	
 
+	public static final TeamsIdentifier[] CUSTOM_FMA_FIELDS = new TeamsIdentifier[] {	
+			new TeamsIdentifier(CUSTOM_FRAUD_MEDIA_ANALYSIS_NO_METADATA),
+			new TeamsIdentifier(CUSTOM_FRAUD_MEDIA_ANALYSIS_CREATION_DATE_BEFORE_INCIDENT_DATE),
+			new TeamsIdentifier(CUSTOM_FRAUD_MEDIA_ANALYSIS_DISTINCT_GPS_COORDINATES),
+			new TeamsIdentifier(CUSTOM_FRAUD_MEDIA_ANALYSIS_EDITED),
+			new TeamsIdentifier(CUSTOM_FRAUD_MEDIA_ANALYSIS_DUPLICATED)			
+	};
+	
+	
 	// ===================================================================
 	// EXIF, IPTC & Embedded metadata fields: 
 	// ===================================================================
@@ -1322,4 +1332,135 @@ public interface OTMMField {
 	 * </ul> 	
 	 */	
 	public static final String IPTC_URGENCY = "ARTESIA.EMBEDDED.FIELD.URGENCY";
+	
+	/**
+	 * Array of embedded metadata fields included in a picture.
+	 * There are three types of metadata:
+	 * <ul>
+	 *    <li><strong>EMBEDDED</strong>: Embedded fields that I couldn't identify as EXIF or IPTC</li>
+	 *    <li><strong>EXIF</strong>: EXIF stands for "Exchangeable Image File Format". 
+	 *    This type of information is formatted according to the TIFF specification, 
+	 *    and may be found in JPG, TIFF, PNG, JP2, PGF, MIFF, HDP, PSP and XCF images, 
+	 *    as well as many TIFF-based RAW images, and even some AVI and MOV videos.</li>
+	 *    <li><strong>IPTC</strong>: The Information Interchange Model (IIM) is a file structure and set 
+	 *    of metadata attributes that can be applied to text, images and other media types. 
+	 *    It was developed in the early 1990s by the International Press Telecommunications Council (IPTC) to expedite the international exchange of news among newspapers and news agencies.</li>
+	 * </ul>
+	 */
+	public static final TeamsIdentifier[] EMBEDDED_PICTURE_FIELDS = new TeamsIdentifier[] {			
+			new TeamsIdentifier(EMBEDDED_ALPHA_MODE),
+			new TeamsIdentifier(EMBEDDED_ALTERNATE_TAPE_NAME),
+			new TeamsIdentifier(EMBEDDED_ALTERNATE_TIMECODE),
+			new TeamsIdentifier(EMBEDDED_BMF_TIME_REFERENCE),
+			new TeamsIdentifier(EMBEDDED_CAMERA_SHUTTER_SPEED),
+			new TeamsIdentifier(EMBEDDED_CHANNELS),
+			new TeamsIdentifier(EMBEDDED_COMPOSER),
+			new TeamsIdentifier(EMBEDDED_COMPRESSOR),
+			new TeamsIdentifier(EMBEDDED_DATE_SHOT),
+			new TeamsIdentifier(EMBEDDED_DATE_TIME),
+			new TeamsIdentifier(EMBEDDED_ENGINEER),
+			new TeamsIdentifier(EMBEDDED_FORMAT),
+			new TeamsIdentifier(EMBEDDED_GENRE),
+			new TeamsIdentifier(EMBEDDED_INSTRUMENT),
+			new TeamsIdentifier(EMBEDDED_LOG_COMMENT),
+			new TeamsIdentifier(EMBEDDED_LOOP),
+			new TeamsIdentifier(EMBEDDED_MODIFIED),
+			new TeamsIdentifier(EMBEDDED_NUMBER_OF_BEATS),
+			new TeamsIdentifier(EMBEDDED_PIXEL_ASPECT_RATIO),
+			new TeamsIdentifier(EMBEDDED_PIXEL_DIMENSION_X),
+			new TeamsIdentifier(EMBEDDED_PIXEL_DIMENSION_Y),
+			new TeamsIdentifier(EMBEDDED_RESOLUTION_X),
+			new TeamsIdentifier(EMBEDDED_RESOLUTION_y),
+			new TeamsIdentifier(EMBEDDED_STRETCH_METHOD),
+			new TeamsIdentifier(EMBEDDED_TAPE_NAME),
+			new TeamsIdentifier(EMBEDDED_TEMPO),
+			new TeamsIdentifier(EMBEDDED_TRACK_NUMBER),
+			
+			new TeamsIdentifier(EXIF_APERTURE_VALUE),
+			new TeamsIdentifier(EXIF_APPLICATION),
+			new TeamsIdentifier(EXIF_ARTIST),
+			new TeamsIdentifier(EXIF_AUTHOR),
+			new TeamsIdentifier(EXIF_AUTHOR_TITLE),
+			new TeamsIdentifier(EXIF_CAMERA_FOCAL_LENGTH),
+			new TeamsIdentifier(EXIF_CAMERA_ISO_SPEED_RATINGS),
+			new TeamsIdentifier(EXIF_CAMERA_LENS),
+			new TeamsIdentifier(EXIF_CAMERA_LIGHT_SOURCE),
+			new TeamsIdentifier(EXIF_CAMERA_MODEL),
+			new TeamsIdentifier(EXIF_CAMERA_ORIENTTION),
+			new TeamsIdentifier(EXIF_CAMERA_RESOLUTION_UNIT),
+			new TeamsIdentifier(EXIF_COLOR_SPACE),
+			new TeamsIdentifier(EXIF_COMPRESSED_BITS_PER_PIXEL),
+			new TeamsIdentifier(EXIF_EXPOSURE_PROGRAM),
+			new TeamsIdentifier(EXIF_FIELD_ORDER),
+			new TeamsIdentifier(EXIF_FILE_SOURCE),
+			new TeamsIdentifier(EXIF_FLASH_FUNCTION_PRESENT),
+			new TeamsIdentifier(EXIF_FLASH_IS_PRESENT),
+			new TeamsIdentifier(EXIF_FLASH_MODE),
+			new TeamsIdentifier(EXIF_FLASH_RED_EYE_MODE),
+			new TeamsIdentifier(EXIF_FLASH_RETRUN),
+			new TeamsIdentifier(EXIF_FRAME_RATE),
+			new TeamsIdentifier(EXIF_F_STOP),
+			new TeamsIdentifier(EXIF_KEY),
+			new TeamsIdentifier(EXIF_MAKE),
+			new TeamsIdentifier(EXIF_MAX_APERTURE_VALUE),
+			new TeamsIdentifier(EXIF_RATING),
+			new TeamsIdentifier(EXIF_RELEASE_DATE),
+			new TeamsIdentifier(EXIF_SAMPLE_RATE),
+			new TeamsIdentifier(EXIF_SCENE),
+			new TeamsIdentifier(EXIF_SHOT_TAKE),
+			new TeamsIdentifier(EXIF_SOFTWARE_PACKAGE),
+			new TeamsIdentifier(EXIF_START_TIMECODE),
+			
+			new TeamsIdentifier(IPTC_CONTACT_COUNTRY_TERRITORY),
+			new TeamsIdentifier(IPTC_CONTACT_CREATOR),
+			new TeamsIdentifier(IPTC_CONTACT_CREATOR_JOB_TITLE),
+			new TeamsIdentifier(IPTC_CONTACT_EMAILS),
+			new TeamsIdentifier(IPTC_CONTACT_POSTAL_CODE),
+			new TeamsIdentifier(IPTC_CONTACT_STATE_PROVINCE),
+			new TeamsIdentifier(IPTC_CONTACT_WEBSITE),
+			new TeamsIdentifier(IPTC_CONTENT_DESCRIPTION_WRITTER),
+			new TeamsIdentifier(IPTC_CONTENT_DESCRITPTION),
+			new TeamsIdentifier(IPTC_CONTENT_HEADLINE),
+			new TeamsIdentifier(IPTC_CONTENT_IPTC_SUBJECT_CODE),
+			new TeamsIdentifier(IPTC_CONTENT_KEYWORDS),
+			new TeamsIdentifier(IPTC_COPYRIGHT_INFO_URL),
+			new TeamsIdentifier(IPTC_COPYRIGHT_NOTICE),
+			new TeamsIdentifier(IPTC_COPYRIGHT_STATUS),
+			new TeamsIdentifier(IPTC_CREATED),
+			new TeamsIdentifier(IPTC_CREATION_DATE),
+			new TeamsIdentifier(IPTC_DESCRIPTION_WRITER),
+			new TeamsIdentifier(IPTC_DOCUMENT_TITLE),
+			new TeamsIdentifier(IPTC_EMBEDDED_DESCRIPTION),
+			new TeamsIdentifier(IPTC_EMBED_CATEGORY),
+			new TeamsIdentifier(IPTC_EMBED_CONTACT_ADDRESS),
+			new TeamsIdentifier(IPTC_EMBED_CONTACT_CITY),
+			new TeamsIdentifier(IPTC_EMBED_CONTACT_PHONES),
+			new TeamsIdentifier(IPTC_IMAGE_CITY),
+			new TeamsIdentifier(IPTC_IMAGE_COUNTRY_TERRITORY),
+			new TeamsIdentifier(IPTC_IMAGE_DATE_CREATED),
+			new TeamsIdentifier(IPTC_IMAGE_INTELLECTUAL_GENRE),
+			new TeamsIdentifier(IPTC_IMAGE_IPTC_SCENE),
+			new TeamsIdentifier(IPTC_IMAGE_ISO_COUNTRY_CODE),
+			new TeamsIdentifier(IPTC_IMAGE_LOCATION),
+			new TeamsIdentifier(IPTC_IMAGE_STATE_PROVINCE),
+			new TeamsIdentifier(IPTC_INSTRUCTIONS),
+			new TeamsIdentifier(IPTC_KEYWORDS),
+			new TeamsIdentifier(IPTC_ORIGIN_CITY),
+			new TeamsIdentifier(IPTC_ORIGIN_COUNTRY_TERRITORY),
+			new TeamsIdentifier(IPTC_ORIGIN_CREDIT),
+			new TeamsIdentifier(IPTC_ORIGIN_DATE_CREATED),
+			new TeamsIdentifier(IPTC_ORIGIN_HEADLINE),
+			new TeamsIdentifier(IPTC_ORIGIN_SOURCE),
+			new TeamsIdentifier(IPTC_STATE_PROVINCE),
+			new TeamsIdentifier(IPTC_STATUS_COPYRIGHT_NOTICE),
+			new TeamsIdentifier(IPTC_STATUS_INSTRUCTIONS),
+			new TeamsIdentifier(IPTC_STATUS_JOB_IDENTIFIER),
+			new TeamsIdentifier(IPTC_STATUS_PROVIDER),
+			new TeamsIdentifier(IPTC_STATUS_RIGHTS_USAGE_TERMS),
+			new TeamsIdentifier(IPTC_STATUS_SOURCE),
+			new TeamsIdentifier(IPTC_STATUS_TITLE),
+			new TeamsIdentifier(IPTC_SUPPLEMENTAL_CATEGORIES),
+			new TeamsIdentifier(IPTC_TRANSMISSION_REFERENCE),
+			new TeamsIdentifier(IPTC_URGENCY)
+	};
 }
