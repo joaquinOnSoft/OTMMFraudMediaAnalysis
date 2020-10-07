@@ -96,7 +96,7 @@ Follow these steps:
 
 In order to store the bad words said in the video you must create some metadata.
 
-## Create a Tabular Metadata table: PROFANITY_VIDEO_TAB
+## Create a Tabular Metadata table: FRAUD_MEDIA_ANALYSIS_TAB
 
 1. Access to TEAMS (<OTMM_SERVER>/teams)
 2. Browse to **Metadata > Custom table editor** at the top menu
