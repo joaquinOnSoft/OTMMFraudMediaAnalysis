@@ -207,7 +207,7 @@ In order to store the Fraud Media Analysis (FMA) information you must create som
 1. Browse to **Metadata > Metadata editor** at the top menu
 2. Click on **Models** at the left menu
 3. Click on **New Model**
-4. Search these fields and add them
+4. Search these fields and add them:
    * **Asset info**
    * **Fraud Media Analysis Criteria**
    * **Rights**
@@ -223,6 +223,14 @@ In order to store the Fraud Media Analysis (FMA) information you must create som
 
 ![Edit Model](images/0030-edit-model-CUSTOM.MODEL.CAR_CRASH_INSURANCE_PICTURE.png)
 
+
+## Validate and apply changes		
+
+Once we have created all the metadata you must deploy your changes in your OTMM instance.
+
+1. Browse to **Metadata > Metadata editor** at the top menu
+2. Click on **Validate** button at the bottom of the screen 
+3. Click on **Apply** button at the bottom of the screen
 
 # Required .jar files
 
