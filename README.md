@@ -201,6 +201,29 @@ In order to store the Fraud Media Analysis (FMA) information you must create som
 
 ![New Field Group](images/0020-new-group-FMA.CATEGORY.CRITERIA.png)
 
+
+## Create a new Model: Car Crash Insurance Picture (CUSTOM.MODEL.CAR_CRASH_INSURANCE_PICTURE)		
+
+1. Browse to **Metadata > Metadata editor** at the top menu
+2. Click on **Models** at the left menu
+3. Click on **New Model**
+4. Search these fields and add them
+   * **Asset info**
+   * **Fraud Media Analysis Criteria**
+   * **Rights**
+   * **Tag**
+   * **Media Analysis**
+   * **Embedded description**
+   * **Embedded IPTC**
+   * **Objects**
+   * **Right & Permissions**
+   * **Intelligent crop**                         
+5. Click on **Add selected** button  
+6. Click on **Save** button
+
+![Edit Model](images/0030-edit-model-CUSTOM.MODEL.CAR_CRASH_INSURANCE_PICTURE.png)
+
+
 # Required .jar files
 
 > This section is only included to know the original location of the .jar files used in the project.
