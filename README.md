@@ -10,7 +10,7 @@ This add-on makes a Fraud analysis based on metadata analysis included in a pict
 These are the criteria evaluated: 
 
    - **No metadata**: The picture doesn't include any metadata
-   - **EXIF DateTime date before of incident date**
+   - **EXIF DateTime before of incident date**
    - **GPS coordinates distinct  Incident coordinates (from address)**
       - Use reverse geocoding to get coordinates from incident address (provided as custom metadata associated with a Crash Picture)
       - Check the distance between coordinates (should be less than 1 km)

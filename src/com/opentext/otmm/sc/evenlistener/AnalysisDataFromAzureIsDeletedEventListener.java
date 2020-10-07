@@ -1,5 +1,5 @@
 /*
- * (C) Copyright 2019 Joaquín Garzón (http://opentext.com) and others.
+ * (C) Copyright 2020 Joaquín Garzón (http://opentext.com) and others.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,9 +20,8 @@ package com.opentext.otmm.sc.evenlistener;
 
 import com.artesia.entity.TeamsIdentifier;
 import com.artesia.event.Event;
-import com.opentext.otmm.sc.evenlistener.handler.FMANoMetadataOnAnalysisDataFromAzureIsDeleted;
+import com.opentext.otmm.sc.evenlistener.handler.FraudMediaAnalysisOnAnalysisDataFromAzureIsDeleted;
 import com.opentext.otmm.sc.evenlistener.handler.OTMMEventHandler;
-import com.opentext.otmm.sc.evenlistener.handler.ProfanityDetectionOnAnalysisDataFromAzureIsDeleted;
 
 public class AnalysisDataFromAzureIsDeletedEventListener extends AbstractEventLister {
 
@@ -42,7 +41,7 @@ public class AnalysisDataFromAzureIsDeletedEventListener extends AbstractEventLi
 		if (event.getEventId().equals(new TeamsIdentifier(OTMMEvent.ANALYSIS_DATA_FROM_AZURE_IS_DELETED))) {
 			log.info("Ids match for Reveiw Job Task completed event. Event Id: " + event.getEventId());
 			
-			OTMMEventHandler handler = new FMANoMetadataOnAnalysisDataFromAzureIsDeleted();
+			OTMMEventHandler handler = new FraudMediaAnalysisOnAnalysisDataFromAzureIsDeleted();
 			handler.handle(event);
 		}
 	}
