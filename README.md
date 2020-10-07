@@ -172,13 +172,34 @@ In order to store the Fraud Media Analysis (FMA) information you must create som
    * **Facetable**: Checked	
 5. Click on **Save** button
 6. Repeat previous steps for the other fields:
-   * CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.NO.METADATA, 
-   * CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DUPLICATED, 
-   * CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.EDITED
-   * CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.PREVIOUS.EXIF.DATETIME
+   * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.NO.METADATA**
+   * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DUPLICATED**
+   * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.EDITED**
+   * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.PREVIOUS.EXIF.DATETIME**
       
 ![New tabular Field](images/0010-new-field-CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DISTINCT.COORDINATES.png)
 
+
+## Create a Field Group: FMA.CATEGORY.CRITERIA	
+
+1. Browse to **Metadata > Metadata editor** at the top menu
+2. Click on **Field Groups** at the left menu
+3. Click on **New Field Group** button
+4. Create a new tabular Field group called: **FMA.CATEGORY.CRITERIA**
+   * **Id**:	FMA.CATEGORY.CRITERIA
+   * **Name**: Fraud Media Analysis Criteria
+5. Click on **Available Tabular Fields** tab
+6. Search **CUSTOM.FIELD.FRAUDANALYSIS** fields
+7. Select these fields:
+   * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DISTINCT.COORDINATES**
+   * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.NO.METADATA**
+   * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.DUPLICATED**
+   * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.EDITED**
+   * **CUSTOM.FIELD.FRAUDANALYSIS.PICTURE.PREVIOUS.EXIF.DATETIME** 
+8. Click on **Add selected** button   
+9. Click on **Save** button
+
+![New Field Group](images/0020-new-group-FMA.CATEGORY.CRITERIA.png)
 
 # Required .jar files
 
