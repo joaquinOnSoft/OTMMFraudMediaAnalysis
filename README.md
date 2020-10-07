@@ -224,6 +224,25 @@ In order to store the Fraud Media Analysis (FMA) information you must create som
 ![Edit Model](images/0030-edit-model-CUSTOM.MODEL.CAR_CRASH_INSURANCE_PICTURE.png)
 
 
+## Create a new Property template: Car Crash Insurance Picture			
+
+1. Browse to **Metadata > Property template** at the top menu
+2. Click on **New property template**
+3. Provide the required information:
+   * **Info** Tab 
+      * **Name**: Car Crash Insurance Picture 
+   * **Properties** Tab
+      * **Model**: Car Crash Insurance Picture                             
+   * **Security** Tab
+      * **Default Asset Policy**: checked
+   * **User groups** Tab
+      * Everyone       
+4. Click on **Save** button
+
+![Edit Model](images/0060-properties-template-OTMM.png)
+
+
+
 ## Validate and apply changes		
 
 Once we have created all the metadata you must deploy your changes in your OTMM instance.
