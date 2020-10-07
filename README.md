@@ -100,7 +100,7 @@ Follow these steps:
 
 # Media Management Administration
 
-In order to store the bad words said in the video you must create some metadata.
+In order to store the Fraud Media Analysis information you must create some metadata.
 
 ## Create a Tabular Metadata table: FRAUD_MEDIA_ANALYSIS_TAB
 
